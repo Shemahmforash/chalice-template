@@ -1,0 +1,11 @@
+.chalice/deployments/
+.chalice/venv/
+.venv/
+
+*.py[co]
+.idea
+__pycache__
+
+.DS_STORE
+.env
+
