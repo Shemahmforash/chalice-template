@@ -5,9 +5,14 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+pre-commit = "*"
 
 [packages]
 chalice = "*"
+black = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
