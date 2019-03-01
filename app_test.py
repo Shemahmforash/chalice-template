@@ -18,7 +18,7 @@ def gateway_factory():
     return create_gateway
 
 
-class TestChalice(object):
+class TestChalice:
     def test_index(self, gateway_factory):
         gateway = gateway_factory()
         response = gateway.handle_request(method="GET", path="/", headers={}, body="")
