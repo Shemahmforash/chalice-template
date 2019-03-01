@@ -6,6 +6,10 @@
 * pipenv - <https://pipenv.readthedocs.io/en/latest/#install-pipenv-today>
 * In order to do a deploy you'll need aws cli setup
 
+## Environment variables
+
+* You need to have this variable in the environment: `PIPENV_VENV_IN_PROJECT` with value 1.
+
 ## Installation
 
 * Clone the project
