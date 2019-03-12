@@ -16,6 +16,10 @@
 * Install all dependencies (including dev ones) `pipenv install --dev`
 * Test that everything is ok by running: `pipenv run chalice local`
 
+## Chalice documentation
+
+* It'll be helpful to check chalice documentation at https://github.com/aws/chalice and https://chalice.readthedocs.io/en/latest/
+
 ## Code style
 
 * Using `black` for the code style. Run `pipenv run pre-commit install` to have a pre-commit that'll aplly the styling for you.
