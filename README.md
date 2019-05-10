@@ -3,6 +3,7 @@
 ## Requirements
 
 * python 3.7
+  * https://docs.python-guide.org/starting/install3/osx/
 * pipenv - <https://pipenv.readthedocs.io/en/latest/#install-pipenv-today>
 * In order to do a deploy you'll need aws cli setup
 
