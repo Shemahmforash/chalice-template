@@ -5,6 +5,7 @@ app = Chalice(app_name="template")
 
 @app.route("/")
 def index():
+    app.log.info("Endpoint / reached")
     return {"hello": "world"}
 
 
