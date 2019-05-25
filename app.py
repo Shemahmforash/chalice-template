@@ -1,13 +1,20 @@
+import logging
 import os
 
 from chalice import Chalice
 
-app = Chalice(app_name="template")
+APP_NAME = "template"
 
-env = os.environ.get("ENVIRONMENT")
+app = Chalice(app_name=APP_NAME)
+
+environment = os.environ.get("ENVIRONMENT")
+
+if environment != "prod":
+    app.log.setLevel(logging.DEBUG)
+    app.debug = True
 
 
 @app.route("/")
 def index():
-    app.log.info("Endpoint / reached in env %s", env)
+    app.log.info("Endpoint / reached in env %s", environment)
     return {"hello": "world"}

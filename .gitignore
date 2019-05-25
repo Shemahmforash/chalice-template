@@ -1,6 +1,8 @@
 .chalice/deployments/
+.chalice/deployed/
 .chalice/venv/
 .venv/
+dist/
 
 *.py[co]
 .idea
@@ -8,4 +10,3 @@ __pycache__
 
 .DS_STORE
 .env
-

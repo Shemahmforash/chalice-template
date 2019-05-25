@@ -3,10 +3,10 @@
   "app_name": "template",
   "stages": {
     "dev": {
-      "api_gateway_stage": "api"
-    },
-    "environment_variables": {
-      "ENVIRONMENT": "dev"
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "ENVIRONMENT": "dev"
+      }
     }
   },
   "environment_variables": {
