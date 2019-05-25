@@ -1,0 +1,24 @@
+language: python
+python:
+  - "3.7"
+
+branches:
+  only:
+    - master
+
+sudo: required
+dist: xenial
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - pytest
+
+after_success:
+  - chalice deploy --stage dev
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
