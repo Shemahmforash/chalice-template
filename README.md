@@ -17,9 +17,9 @@
 
 * It'll be helpful to check chalice documentation at https://github.com/aws/chalice and https://chalice.readthedocs.io/en/latest/
 
-## Code style
+## Code style and type checks
 
-* Using `black` for the code style. Run `pre-commit install` to have a pre-commit that'll aplly the styling for you.
+* There's a pre-commit hook that'll enforce the code styling (using `black` and `isort`) and verify typings (using `mypy`). Run `pre-commit install` to install it.
 
 ## Testing
 

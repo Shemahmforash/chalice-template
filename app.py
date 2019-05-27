@@ -1,5 +1,6 @@
 import logging
 import os
+from typing import Dict
 
 from chalice import Chalice
 
@@ -15,6 +16,7 @@ if environment != "prod":
 
 
 @app.route("/")
-def index():
+def index() -> Dict[str, str]:
     app.log.info("Endpoint / reached in env %s", environment)
+
     return {"hello": "world"}
