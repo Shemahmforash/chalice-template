@@ -1,26 +1,20 @@
-import json
+from http import HTTPStatus
 
 import pytest
+from chalice import Chalice
+from pytest_chalice.handlers import RequestHandler, ResponseHandler
 
-from app import app
+from app import app as chalice_app
 
 
 @pytest.fixture
-def gateway_factory():
-    from chalice.config import Config
-    from chalice.local import LocalGateway
-
-    def create_gateway(config=None):
-        if config is None:
-            config = Config()
-        return LocalGateway(app, config)
-
-    return create_gateway
+def app() -> Chalice:
+    return chalice_app
 
 
 class TestChalice:
-    def test_index(self, gateway_factory):
-        gateway = gateway_factory()
-        response = gateway.handle_request(method="GET", path="/", headers={}, body="")
-        assert response["statusCode"] == 200
-        assert json.loads(response["body"]) == dict([("hello", "world")])
+    def test_index(self, client: RequestHandler):
+        response: ResponseHandler = client.get("/")
+
+        assert response.status_code == HTTPStatus.OK
+        assert response.json == {"hello": "world"}
