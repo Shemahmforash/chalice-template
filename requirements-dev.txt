@@ -1,3 +1,4 @@
 pre-commit
 pytest
 pytest-chalice
+wheel>=0.38.0 # not directly required, pinned by Snyk to avoid a vulnerability
